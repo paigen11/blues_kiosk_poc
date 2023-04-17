@@ -7,8 +7,35 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Blues Weather App</title>
     <script type="module">
-      // todo make this a list of cities eventually pulled from Notehub env vars
-      import { cityList } from "./defaultCityList.js";
+      // load cities from a separate script eventually pulled from Notehub env vars
+
+      const loadScript = (async = true, type = "text/javascript") => {
+        return new Promise((resolve, reject) => {
+          try {
+            const cityListScript = document.createElement("script");
+            cityListScript.type = type;
+            cityListScript.async = async;
+            cityListScript.src = "./defaultCityList.js";
+
+            cityListScript.addEventListener("load", (ev) => {
+              resolve({ status: true });
+            });
+
+            cityListScript.addEventListener("error", (ev) => {
+              reject({
+                status: false,
+                message: `Failed to load the script`,
+              });
+            });
+
+            document.body.appendChild(cityListScript);
+          } catch (error) {
+            reject(error);
+          }
+        });
+      };
+
+      await loadScript();
 
       // todo make this a secret
       const WEATHER_API_KEY = "2c95768ba2ed4080828162953231204";

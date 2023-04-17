@@ -23,6 +23,8 @@ cat kiosk-poc.json
 echo ""
 zip kiosk-poc.zip -0 metadata/*
 zip kiosk-poc.zip resources/*
+zip kiosk-poc.zip resources/images/weather-icons/day/*
+zip kiosk-poc.zip resources/images/weather-icons/night/*
 
 # Clean up
 rm -rf metadata

@@ -1,3 +1,3 @@
-export const cityList = {
+const cityList = {
   cities: ["Atlanta", "Boston", "Austin", "San Francisco"],
 };

@@ -29,8 +29,8 @@ else
 fi
 
 # Configuration
-DOWNLOAD="$HOME/kiosk-data/download"
-ACTIVE="$HOME/kiosk-data/active"
+DOWNLOAD="$HOME/kiosk-poc-data/download"
+ACTIVE="$HOME/kiosk-poc-data/active"
 ACTIVEHTML="$ACTIVE/resources/index.html"
 ACTIVEDATA="$ACTIVE/resources/defaultCityList.js"
 PRODUCT="com.blues.kiosk_poc"

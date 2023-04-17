@@ -5,10 +5,13 @@ rm -r ../resources/* 2>/dev/null
 cp web-app.json ../kiosk-poc.json
 # create a new resources folder
 mkdir -p ../resources
+mkdir -p ../resources/images/weather-icons/day
+mkdir -p ../resources/images/weather-icons/night
 cp index.html ../resources/index.html
 cp defaultCityList.js ../resources/defaultCityList.js
 cp styles.css ../resources/styles.css
-cp -a images/. ../resources/images/
+cp -vr images/weather-icons/day/* ../resources/images/weather-icons/day
+cp -vr images/weather-icons/night/* ../resources/images/weather-icons/night
 pushd ..
 ./package.sh
 popd
