@@ -140,7 +140,7 @@ do
 	# Rewrite the data file and save for next iteration
 	if [[ "$DATA" != "" && "$DATA" != "$KIOSK_DATA" ]]; then
 		echo "Writing new data: $DATA"
-		echo "var data = $DATA" >$ACTIVEDATA
+		echo "var cityList = $DATA" >$ACTIVEDATA
 	fi
 	KIOSK_DATA="$DATA"
 

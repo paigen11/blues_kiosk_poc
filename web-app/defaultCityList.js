@@ -1,3 +1,3 @@
-const cityList = {
-  cities: ["Atlanta", "Boston", "Austin", "San Francisco"],
+var cityList = {
+  cities: ["San Jose", "San Clemente", "San Bernadino", "San Sebastien"],
 };
